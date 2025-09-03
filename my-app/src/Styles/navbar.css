@@ -1,0 +1,73 @@
+.nav {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 16px;
+  padding: 12px 20px;
+  background: paleturquoise;
+  border-bottom: 1px solid #eee;
+}
+
+.brand { font-weight:700; }
+
+.links a {
+  margin-left: 12px;
+  text-decoration: none;
+  color: #0077ff;
+}
+
+.links a:hover { text-decoration: underline; }
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  .journal-container {
+    max-width: 90%;
+    padding: 16px;
+  }
+
+  .journal-container h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .journal-container {
+    max-width: 95%;
+    padding: 14px;
+  }
+
+  .entry-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .button-group {
+    margin-top: 8px;
+  }
+
+  .journal-save-btn,
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .journal-container h1 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .journal-textarea,
+  .journal-search {
+    font-size: 14px;
+  }
+
+  .entry-date {
+    font-size: 11px;
+  }
+}

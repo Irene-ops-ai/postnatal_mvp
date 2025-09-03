@@ -1,0 +1,17 @@
+/* global resets + navbar import */
+@import "./navbar.css";
+@import "./journal.css";
+
+:root{
+  --bg: pink;
+  --card: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: #111;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}

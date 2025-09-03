@@ -1,0 +1,197 @@
+.journal-container {
+  padding: 20px;
+  max-width: 760px;
+  margin: 22px auto;
+  background: palevioletred;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(20,20,20,0.04);
+}
+
+.journal-container h1 { margin-top: 0; font-size: 1.4rem; }
+
+.journal-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d8dbe0;
+  font-size: 15px;
+  resize: vertical;
+}
+
+/* meta row: counter / progress / save */
+.meta-row {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:8px;
+  margin-bottom:10px;
+}
+
+.char-counter { margin-right: 8px; color:#666; font-size:0.9rem; }
+.char-counter.warning { color: #d9534f; font-weight:700; }
+
+.progress-bar { flex:1; height:8px; background:#eef2f7; border-radius:999px; overflow:hidden; }
+.progress-fill { height:100%; width:0; background:#0077ff; transition: width .2s ease; }
+.progress-fill.warning { background:#d9534f; }
+
+.journal-save-btn {
+  padding:8px 12px;
+  background:#0077ff; color:#fff; border: none; border-radius:8px; cursor:pointer;
+}
+
+.journal-search {
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #d8dbe0;
+  margin-bottom:12px;
+}
+
+/* entries */
+.journal-entries h2 { margin-bottom:6px; }
+.journal-entries ul { list-style:none; padding:0; margin:0; }
+
+.journal-entries li { margin-bottom:10px; }
+.entry-row {
+  background:purple;
+  border:1px solid #eef2f7;
+  padding:10px;
+  border-radius:8px;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:flex-start;
+}
+
+.entry-text { white-space:pre-wrap; word-break:break-word; color:#222; }
+.entry-date { font-size:12px; color:#666; margin-top:6px; }
+
+.button-group { display:flex; gap:8px; }
+.edit-btn { background:#ffd54f; color:#111; border:none; padding:6px 8px; border-radius:6px; cursor:pointer; }
+.delete-btn { background:#ff6b6b; color:#fff; border:none; padding:6px 8px; border-radius:6px; cursor:pointer; }
+
+.latest-entry .entry-row { background:#eaffef; border-color:#b7f0c4; }
+.no-entries { color:#777; padding:10px 0; }
+
+/* === Survey Section Styling === */
+.survey-container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, gold, pink);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  color: #111;
+}
+
+.survey-container h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.survey-container p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.survey-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.survey-container label {
+  font-weight: bold;
+  color: #111;
+}
+
+.survey-container textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid black;
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+}
+
+.survey-container textarea:focus {
+  outline: none;
+  border-color: pink;
+  box-shadow: 0 0 6px rgba(255, 105, 180, 0.6);
+}
+
+.survey-container button {
+  align-self: flex-start;
+  background: black;
+  color: gold;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.survey-container button:hover {
+  background: pink;
+  color: black;
+}
+
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  .journal-container {
+    max-width: 90%;
+    padding: 16px;
+  }
+
+  .journal-container h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .journal-container {
+    max-width: 95%;
+    padding: 14px;
+  }
+
+  .entry-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .button-group {
+    margin-top: 8px;
+  }
+
+  .journal-save-btn,
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .journal-container h1 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .journal-textarea,
+  .journal-search {
+    font-size: 14px;
+  }
+
+  .entry-date {
+    font-size: 11px;
+  }
+}
